@@ -112,21 +112,21 @@ class App extends React.Component {
             },
             {
                 id: 9,
-                name: 'Bobs Burger',
+                name: 'Bobs Beef Burger',
                 ingredients: ['beef patties', 'buns', 'bacon', 'fried onions', 'barbecue sauce'],
                 instructions: ['cook beef patties to taste', 'lightly toast buns', 'cook bacon', 'assemble burger', 'smother with barbecue sauce']
             },
             {
                 id: 10,
-                name: 'james',
-                ingredients: ['tofu', 'pie crust', 'assorted veggies', 'gravy sauce'],
-                instructions: ['pre-heat oven to 400', 'line pan with pie crust', 'mix tofu, veggies and gravy sauce', 'put tofu mix in pie crust', 'cook until golden brown']
+                name: 'Beef Pie',
+                ingredients: ['ground beef', 'pie crust', 'assorted veggies', 'gravy sauce'],
+                instructions: ['pre-heat oven to 400', 'line pan with pie crust', 'mix beef, veggies and gravy sauce', 'put beef mix in pie crust', 'cook until golden brown']
             },
             {
                 id: 11,
-                name: 'Tofu Potpie',
-                ingredients: ['tofu', 'pie crust', 'assorted veggies', 'gravy sauce'],
-                instructions: ['pre-heat oven to 400', 'line pan with pie crust', 'mix tofu, veggies and gravy sauce', 'put tofu mix in pie crust', 'cook until golden brown']
+                name: 'Beefy Vegetable Soup',
+                ingredients: ['ground beef', 'assorted veggies', 'beef broth'],
+                instructions: ['brown ground beef', 'in a large saucepan mix beef and veggies', 'add beef broth', 'cook on low until vegetables are cooked through']
             },
             {
                 id: 12,
