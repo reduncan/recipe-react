@@ -1,0 +1,17 @@
+#root {
+    margin: 15px;
+}
+
+.main {
+    height: 100vh;
+    border: 2px solid;
+}
+
+.btn.btn-primary {
+    background: blue;
+}
+
+input {
+    width: 250px;
+    border: 1px solid black;
+}
