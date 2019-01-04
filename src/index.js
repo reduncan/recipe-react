@@ -142,15 +142,15 @@ class App extends React.Component {
             },
             {
                 id: 14,
-                name: '',
-                ingredients: ['tofu', 'pie crust', 'assorted veggies', 'gravy sauce'],
-                instructions: ['pre-heat oven to 400', 'line pan with pie crust', 'mix tofu, veggies and gravy sauce', 'put tofu mix in pie crust', 'cook until golden brown']
+                name: 'Ham Roll-Up',
+                ingredients: ['thin sliced ham', 'condiment of your choosing', 'spinach', 'diced tomatoes'],
+                instructions: ['lay 2 slices of ham flat', 'spread your condiment of choice across ham', 'place spinach on ham', 'roll ham half way', 'add diced tomatoes', 'finish rolling ham']
             },
             {
                 id: 15,
-                name: 'Tofu Potpie',
-                ingredients: ['tofu', 'pie crust', 'assorted veggies', 'gravy sauce'],
-                instructions: ['pre-heat oven to 400', 'line pan with pie crust', 'mix tofu, veggies and gravy sauce', 'put tofu mix in pie crust', 'cook until golden brown']
+                name: 'Turkey Chili',
+                ingredients: ['ground turkey', 'red kidney beans', 'whole stewed tomatoes', 'chili powder'],
+                instructions: ['brown turkey and drain fat', 'mix browned turkey, kidney beans, tomatoes and chili powder in large sauce pan', 'bring to a boil', 'reduce heat to low', 'cook on low for 1 hour']
             }
         ]
     }
