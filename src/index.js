@@ -130,19 +130,19 @@ class App extends React.Component {
             },
             {
                 id: 12,
-                name: 'Tofu Potpie',
-                ingredients: ['tofu', 'pie crust', 'assorted veggies', 'gravy sauce'],
-                instructions: ['pre-heat oven to 400', 'line pan with pie crust', 'mix tofu, veggies and gravy sauce', 'put tofu mix in pie crust', 'cook until golden brown']
+                name: 'Spaghetti Squash Pasta',
+                ingredients: ['spaghettis squash', 'tomatoe sauce', 'assorted veggies'],
+                instructions: ['pre-heat oven to 400', 'cut squash in half long ways', 'mix tomatoe sauce and veggies in saucepan and cook on low', 'season squash with salt, pepper and olive oil', 'cook squash until softened', 'use fork to break up squash', 'place veggie mix on top and enjoy']
             },
             {
                 id: 13,
-                name: 'Tofu Potpie',
-                ingredients: ['tofu', 'pie crust', 'assorted veggies', 'gravy sauce'],
-                instructions: ['pre-heat oven to 400', 'line pan with pie crust', 'mix tofu, veggies and gravy sauce', 'put tofu mix in pie crust', 'cook until golden brown']
+                name: 'Tuna Salad',
+                ingredients: ['fresh canned tuna', 'celery', 'pickles', 'mustard', 'mayonnaise'],
+                instructions: ['place tuna in large bowl', 'chop celery and pickles then add to bowl', 'add mustard and mayonnaise to taste', 'mix until everything is well distributed', 'serve as sandwhichs or with crackers']
             },
             {
                 id: 14,
-                name: 'Tofu Potpie',
+                name: '',
                 ingredients: ['tofu', 'pie crust', 'assorted veggies', 'gravy sauce'],
                 instructions: ['pre-heat oven to 400', 'line pan with pie crust', 'mix tofu, veggies and gravy sauce', 'put tofu mix in pie crust', 'cook until golden brown']
             },
