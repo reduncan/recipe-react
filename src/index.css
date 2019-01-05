@@ -2,16 +2,88 @@
     margin: 15px;
 }
 
+header {
+    background-color: blueviolet;
+    height: 100px;
+}
+
+img {
+    margin: 10px;
+}
+
+h1 {
+    font-size: 38px;
+    color: white;
+    margin-left: 10px;
+    margin-top: 25px;
+    font-family: 'Lobster', cursive;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: 'Happy Monkey', cursive;
+}
+
+li {
+    font-family: 'Happy Monkey', cursive;
+    font-size: 18px;
+}
+
 .main {
     height: 100vh;
-    border: 2px solid;
+    border: 2px solid blueviolet;
 }
 
 .btn.btn-primary {
-    background: blue;
+    background: blueviolet;
+    border: blueviolet;
+    width: 100px;
+    border-radius: 10px;
+    margin-left: 15px;
 }
 
 input {
-    width: 250px;
+    width: 655px;
+    height: 36px;
     border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 17px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.recipe {
+    display: grid;
+    border: 2px solid #4b48d6;
+    width: 770px;
+    height: 75px;
+    align-content: center;
+    font-size: 32px;
+    padding-left: 10px;
+    font-family: 'Happy Monkey', cursive;
+}
+
+.directory {
+    border-right: 1px solid #4b48d6;
+    height: 765px;
+
+}
+
+.detail {
+    border-left: 1px solid #4b48d6;
+    height: 765px;
+
+}
+
+.center {
+    text-align: center;
+}
+
+.name {
+    font-size: 42px;
+    margin-top: 25px;
 }

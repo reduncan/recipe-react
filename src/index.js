@@ -3,27 +3,37 @@ import ReactDOM from 'react-dom';
 import './reset.css';
 import 'spectre.css';
 import './index.css';
+import logo from './cutlery-circle.png';
+
+const Header = (props) => (
+    <div className="column col-12 header">
+        <header className="columns">
+            <img src={logo} alt={'Cutlery'} width={80} height={80}/>
+            <h1>REACTive Recipes</h1>
+        </header>
+    </div>
+)
 
 const DirectoryView = (props) => (
-    <div className="column col-6">
+    <div className="column col-6 directory">
         <SearchForm value={props.value} changeHandler={props.changeHandler} clickHandler={props.clickHandler} />
         {props.searchResults.map((recipe, i) => <RecipeCard name={recipe.name} id={recipe.id} clickHandler={props.recipeHandler} key={i}/>)}  
     </div>
 );
 
 const DetailView = (props) => (
-    <div className="column col-6">
+    <div className="column col-6 detail">
         <div className="container">
             <div className="columns">
-                <p className="column col-12">{props.recipe.name}</p>
+                <p className="column col-12 center name">{props.recipe.name}</p>
                 <div className="column col-3">
-                    <p>{props.recipe.ingredient}</p>
+                    <h2>{props.recipe.ingredient}</h2>
                     <ul>
                         {props.recipe.ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
                     </ul>
                 </div>
                 <div className="column col-6">
-                    <p>{props.recipe.instruction}</p>
+                    <h2>{props.recipe.instruction}</h2>
                     <ol>
                         {props.recipe.instructions.map((instruction, i) => <li key={i}>{instruction}</li>)}
                     </ol>
@@ -41,7 +51,7 @@ const SearchForm = (props) => (
 );
 
 const RecipeCard = (props) => (
-    <p onClick={() => props.clickHandler(props.id)}>{props.name}</p>
+    <p className="col-6 col-mx-auto recipe" onClick={() => props.clickHandler(props.id)}>{props.name}</p>
 );
 
 class App extends React.Component {
@@ -78,79 +88,105 @@ class App extends React.Component {
                 id: 3,
                 name: 'Tofu Stir-fry',
                 ingredients: ['tofu', 'assorted veggies', 'vegan soy-sauce', 'rice', 'oil'],
-                instructions: ['heat wok on high heat', 'heat oil in wok', 'heat vegetables', 'add rice', 'add tofu', 'slowly stir until fried']
+                instructions: ['heat wok on high heat', 'heat oil in wok', 'heat vegetables', 'add rice', 'add tofu', 'slowly stir until fried'],
+                ingredient: 'Ingredients',
+                instruction: 'Instructions'
             },
             {
                 id: 4,
                 name: 'Chicken Pasta',
                 ingredients: ['chicken breast', 'your favorite pasta', 'white sauce', 'vegetable medley'],
-                instructions: ['cook pasta', 'sautee chicken in sauce pan', 'add white sauce once chicken is cooked', 'toss chicken with pasta', 'add vegetable medley and stir slowly until veggies are heated']
+                instructions: ['cook pasta', 'sautee chicken in sauce pan', 'add white sauce once chicken is cooked', 'toss chicken with pasta', 'add vegetable medley and stir slowly until veggies are heated'],
+                ingredient: 'Ingredients',
+                instruction: 'Instructions'
             },
             {
                 id: 5,
                 name: 'Fried Chicken Sandwhich',
                 ingredients: ['chicken strips', 'bread', 'your favorite sauce', 'lettuce', 'tomatoe'],
-                instructions: ['batter and fry chicken strips', 'slice bread', 'add a layer of sauce to bottom piece of bread', 'place fried chicken strips on top of sauce', 'place lettuce, tomatoe and top piece of bread']
+                instructions: ['batter and fry chicken strips', 'slice bread', 'add a layer of sauce to bottom piece of bread', 'place fried chicken strips on top of sauce', 'place lettuce, tomatoe and top piece of bread'],
+                ingredient: 'Ingredients',
+                instruction: 'Instructions'
             },
             {
                 id: 6,
                 name: 'Chicken Parmesan',
                 ingredients: ['chicken breast', 'your favorite noodle', 'robust red sauce', 'parmesan cheese', 'panko bread crumbs'],
-                instructions: ['pre-heat oven to 400', 'cover chicken in bread crumbs', 'bake chicken until done', 'cook noodles', 'mix in sauce and sautee on low', 'once everything is cooked plate and enjoy']
+                instructions: ['pre-heat oven to 400', 'cover chicken in bread crumbs', 'bake chicken until done', 'cook noodles', 'mix in sauce and sautee on low', 'once everything is cooked plate and enjoy'],
+                ingredient: 'Ingredients',
+                instruction: 'Instructions'
             },
             {
                 id: 7,
                 name: 'Turkey Meatballs',
                 ingredients: ['ground turkey', 'favorite seasoning', 'tomatoe sauce'],
-                instructions: ['mix seasoning and turkey', 'form turkey mix into balls', 'sautee turkey balls until cooked on the outside', 'place meatballs in a large pot and add tomatoe sauce', 'simmer on low heat covered until cooked through']
+                instructions: ['mix seasoning and turkey', 'form turkey mix into balls', 'sautee turkey balls until cooked on the outside', 'place meatballs in a large pot and add tomatoe sauce', 'simmer on low heat covered until cooked through'],
+                ingredient: 'Ingredients',
+                instruction: 'Instructions'
             },
             {
                 id: 8,
                 name: 'Turkey BLT',
                 ingredients: ['sliced turkey breast', 'tomatoe', 'lettuce', 'bacon', 'bread'],
-                instructions: ['place turkey on bread', 'put lettuce on top of turkey', 'place tomatoe on top of lettuce', 'put bacon on top of tomatoe', 'finish with top layer of bread']
+                instructions: ['place turkey on bread', 'put lettuce on top of turkey', 'place tomatoe on top of lettuce', 'put bacon on top of tomatoe', 'finish with top layer of bread'],
+                ingredient: 'Ingredients',
+                instruction: 'Instructions'
             },
             {
                 id: 9,
                 name: 'Bobs Beef Burger',
                 ingredients: ['beef patties', 'buns', 'bacon', 'fried onions', 'barbecue sauce'],
-                instructions: ['cook beef patties to taste', 'lightly toast buns', 'cook bacon', 'assemble burger', 'smother with barbecue sauce']
+                instructions: ['cook beef patties to taste', 'lightly toast buns', 'cook bacon', 'assemble burger', 'smother with barbecue sauce'],
+                ingredient: 'Ingredients',
+                instruction: 'Instructions'
             },
             {
                 id: 10,
                 name: 'Beef Pie',
                 ingredients: ['ground beef', 'pie crust', 'assorted veggies', 'gravy sauce'],
-                instructions: ['pre-heat oven to 400', 'line pan with pie crust', 'mix beef, veggies and gravy sauce', 'put beef mix in pie crust', 'cook until golden brown']
+                instructions: ['pre-heat oven to 400', 'line pan with pie crust', 'mix beef, veggies and gravy sauce', 'put beef mix in pie crust', 'cook until golden brown'],
+                ingredient: 'Ingredients',
+                instruction: 'Instructions'
             },
             {
                 id: 11,
                 name: 'Beefy Vegetable Soup',
                 ingredients: ['ground beef', 'assorted veggies', 'beef broth'],
-                instructions: ['brown ground beef', 'in a large saucepan mix beef and veggies', 'add beef broth', 'cook on low until vegetables are cooked through']
+                instructions: ['brown ground beef', 'in a large saucepan mix beef and veggies', 'add beef broth', 'cook on low until vegetables are cooked through'],
+                ingredient: 'Ingredients',
+                instruction: 'Instructions'
             },
             {
                 id: 12,
                 name: 'Spaghetti Squash Pasta',
                 ingredients: ['spaghettis squash', 'tomatoe sauce', 'assorted veggies'],
-                instructions: ['pre-heat oven to 400', 'cut squash in half long ways', 'mix tomatoe sauce and veggies in saucepan and cook on low', 'season squash with salt, pepper and olive oil', 'cook squash until softened', 'use fork to break up squash', 'place veggie mix on top and enjoy']
+                instructions: ['pre-heat oven to 400', 'cut squash in half long ways', 'mix tomatoe sauce and veggies in saucepan and cook on low', 'season squash with salt, pepper and olive oil', 'cook squash until softened', 'use fork to break up squash', 'place veggie mix on top and enjoy'],
+                ingredient: 'Ingredients',
+                instruction: 'Instructions'
             },
             {
                 id: 13,
                 name: 'Tuna Salad',
                 ingredients: ['fresh canned tuna', 'celery', 'pickles', 'mustard', 'mayonnaise'],
-                instructions: ['place tuna in large bowl', 'chop celery and pickles then add to bowl', 'add mustard and mayonnaise to taste', 'mix until everything is well distributed', 'serve as sandwhichs or with crackers']
+                instructions: ['place tuna in large bowl', 'chop celery and pickles then add to bowl', 'add mustard and mayonnaise to taste', 'mix until everything is well distributed', 'serve as sandwhichs or with crackers'],
+                ingredient: 'Ingredients',
+                instruction: 'Instructions'
             },
             {
                 id: 14,
                 name: 'Ham Roll-Up',
                 ingredients: ['thin sliced ham', 'condiment of your choosing', 'spinach', 'diced tomatoes'],
-                instructions: ['lay 2 slices of ham flat', 'spread your condiment of choice across ham', 'place spinach on ham', 'roll ham half way', 'add diced tomatoes', 'finish rolling ham']
+                instructions: ['lay 2 slices of ham flat', 'spread your condiment of choice across ham', 'place spinach on ham', 'roll ham half way', 'add diced tomatoes', 'finish rolling ham'],
+                ingredient: 'Ingredients',
+                instruction: 'Instructions'
             },
             {
                 id: 15,
                 name: 'Turkey Chili',
                 ingredients: ['ground turkey', 'red kidney beans', 'whole stewed tomatoes', 'chili powder'],
-                instructions: ['brown turkey and drain fat', 'mix browned turkey, kidney beans, tomatoes and chili powder in large sauce pan', 'bring to a boil', 'reduce heat to low', 'cook on low for 1 hour']
+                instructions: ['brown turkey and drain fat', 'mix browned turkey, kidney beans, tomatoes and chili powder in large sauce pan', 'bring to a boil', 'reduce heat to low', 'cook on low for 1 hour'],
+                ingredient: 'Ingredients',
+                instruction: 'Instructions'
             }
         ]
     }
@@ -173,6 +209,7 @@ class App extends React.Component {
         return (
             <div className="container main">
                 <div className="columns">
+                    <Header />
                     <DirectoryView 
                         recipes={recipeRef} 
                         searchResults={this.state.selectedRecipes} 
@@ -182,7 +219,8 @@ class App extends React.Component {
                         recipeHandler={this.chooseRecipe}
                     />
                     <DetailView 
-                        recipe={this.state.chosenRecipe} />
+                        recipe={this.state.chosenRecipe} 
+                    />
                 </div>
             </div>
         )
