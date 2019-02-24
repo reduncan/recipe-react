@@ -1,58 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './reset.css';
-import 'spectre.css';
-import './index.css';
-import logo from './cutlery-circle.png';
-
-const Header = (props) => (
-    <div className="column col-12 header">
-        <header className="columns">
-            <img src={logo} alt={'Cutlery'} width={80} height={80}/>
-            <h1>REACTive Recipes</h1>
-        </header>
-    </div>
-)
-
-const DirectoryView = (props) => (
-    <div className="column col-6 directory">
-        <SearchForm value={props.value} changeHandler={props.changeHandler} clickHandler={props.clickHandler} />
-        {props.searchResults.map((recipe, i) => <RecipeCard name={recipe.name} id={recipe.id} clickHandler={props.recipeHandler} key={i}/>)}  
-    </div>
-);
-
-const DetailView = (props) => (
-    <div className="column col-6 detail">
-        <div className="container">
-            <div className="columns">
-                <p className="column col-12 center name">{props.recipe.name}</p>
-                <div className="column col-3">
-                    <h2>{props.recipe.ingredient}</h2>
-                    <ul>
-                        {props.recipe.ingredients.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
-                    </ul>
-                </div>
-                <div className="column col-6">
-                    <h2>{props.recipe.instruction}</h2>
-                    <ol>
-                        {props.recipe.instructions.map((instruction, i) => <li key={i}>{instruction}</li>)}
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
-);
-
-const SearchForm = (props) => (
-    <form>
-        <input value={props.value} onChange={props.changeHandler} />
-        <button className="btn btn-primary" onClick={props.clickHandler}>Search</button>
-    </form>
-);
-
-const RecipeCard = (props) => (
-    <p className="col-6 col-mx-auto recipe" onClick={() => props.clickHandler(props.id)}>{props.name}</p>
-);
+import Header from './components/Header';
+import DirectoryView from './components/DirectoryView';
+import DetailView from './components/DetailView';
 
 class App extends React.Component {
 
@@ -207,8 +157,8 @@ class App extends React.Component {
     render() {
         const recipeRef = this.state.recipes;
         return (
-            <div className="container main">
-                <div className="columns">
+            <div>
+                <div>
                     <Header />
                     <DirectoryView 
                         recipes={recipeRef} 
