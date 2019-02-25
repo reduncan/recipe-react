@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Header from './components/Header';
 import DirectoryView from './components/DirectoryView';
 import DetailView from './components/DetailView';
+import Grid from '@material-ui/core/Grid';
 
 class App extends React.Component {
 
@@ -151,27 +152,27 @@ class App extends React.Component {
     }
 
     chooseRecipe = (id) => {
-        this.setState({ chosenRecipe: this.state.recipes.find(recipe => recipe.id === id)})
+        this.setState({ chosenRecipe: this.state.recipes.find(recipe => recipe.id === id) })
     }
 
     render() {
         const recipeRef = this.state.recipes;
         return (
             <div>
-                <div>
+                <Grid container>
                     <Header />
-                    <DirectoryView 
-                        recipes={recipeRef} 
-                        searchResults={this.state.selectedRecipes} 
-                        value={recipeRef.searchVal} 
-                        changeHandler={this.handleChangeRecipes} 
-                        clickHandler={this.selectRecipes} 
+                    <DirectoryView
+                        recipes={recipeRef}
+                        searchResults={this.state.selectedRecipes}
+                        value={recipeRef.searchVal}
+                        changeHandler={this.handleChangeRecipes}
+                        clickHandler={this.selectRecipes}
                         recipeHandler={this.chooseRecipe}
                     />
-                    <DetailView 
-                        recipe={this.state.chosenRecipe} 
+                    <DetailView
+                        recipe={this.state.chosenRecipe}
                     />
-                </div>
+                </Grid>
             </div>
         )
     }

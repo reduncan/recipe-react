@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import logo from '../../src/cutlery-circle.png';
+import Grid from '@material-ui/core/Grid';
 
 const styles = theme => ({
   AppBar: {
@@ -27,14 +28,14 @@ function Header(props) {
   const { classes } = props;
 
   return (
-    <div className="header">
+    <Grid className="header" item xs={12}>
       <AppBar position="static" className={classes.AppBar}>
-        <Toolbar classes>
+        <Toolbar>
           <img src={logo} alt={'Cutlery'} width={80} height={80} className={classes.img}/>
           <p className={classes.p}>REACTive Recipes</p>
         </Toolbar>
       </AppBar>
-    </div>
+    </Grid>
   )
 }
 
