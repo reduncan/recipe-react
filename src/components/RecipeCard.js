@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import { unstable_Box as Box } from '@material-ui/core/Box';
+import Card from '@material-ui/core/Card';
 
 const styles = theme => ({
     recipe: {
@@ -13,7 +13,8 @@ const styles = theme => ({
     box: {
         marginBottom: 25,
         width: 75 + '%',
-        marginLeft: 10 + '%'
+        marginLeft: 10 + '%',
+        boxShadow: '0 3px 5px 2px rgba(138, 43, 226, .5)'    
     }
 });
 
@@ -22,9 +23,9 @@ function RecipeCard(props) {
     const { classes } = props;
 
     return (
-        <Box border={2} borderColor="blueviolet" className={classes.box}>
+        <Card className={classes.box}>
             <p className={classes.recipe} onClick={() => props.clickHandler(props.id)}>{props.name}</p>
-        </Box>
+        </Card>
     )
 }
 
