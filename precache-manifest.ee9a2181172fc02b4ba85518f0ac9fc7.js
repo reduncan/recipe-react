@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "0da02d7468fe600bcc8b",
-    "url": "/recipe-react/static/js/main.0da02d74.chunk.js"
+    "revision": "8c3be94706d1118ac34c",
+    "url": "/recipe-react/static/js/main.8c3be947.chunk.js"
   },
   {
     "revision": "19a55f31869989d6f747",
@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/recipe-react/static/js/runtime~main.5edaa3c6.js"
   },
   {
-    "revision": "1fba11eb99791ed7856df6d93091f1dd",
+    "revision": "b046cef91709e9c5af9e7c98f1ad0000",
     "url": "/recipe-react/index.html"
   }
 ];
