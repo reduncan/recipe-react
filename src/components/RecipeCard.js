@@ -11,7 +11,8 @@ const styles = theme => ({
         textAlign: "center"
     },
     box: {
-        marginBottom: 25,
+        marginTop: 20,
+        marginBottom: 5,
         width: 75 + '%',
         marginLeft: 10 + '%',
         boxShadow: '0 3px 5px 2px rgba(138, 43, 226, .5)'    
