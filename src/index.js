@@ -3,7 +3,19 @@ import ReactDOM from 'react-dom';
 import Header from './components/Header';
 import DirectoryView from './components/DirectoryView';
 import DetailView from './components/DetailView';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+
+const styles = theme => ({
+    detail: {
+        [theme.breakpoints.up("md")]: {
+            position: "relative",
+            bottom: 350,
+            left: 800
+          }
+    }
+});
 
 class App extends React.Component {
 
@@ -157,10 +169,15 @@ class App extends React.Component {
 
     render() {
         const recipeRef = this.state.recipes;
+
+        const { classes } = this.props;
+
         return (
             <div>
                 <Grid container>
                     <Header />
+                </Grid>
+                <Grid container>
                     <DirectoryView
                         recipes={recipeRef}
                         searchResults={this.state.selectedRecipes}
@@ -169,6 +186,8 @@ class App extends React.Component {
                         clickHandler={this.selectRecipes}
                         recipeHandler={this.chooseRecipe}
                     />
+                </Grid>
+                <Grid container className={classes.detail}>
                     <DetailView
                         recipe={this.state.chosenRecipe}
                     />
@@ -178,4 +197,10 @@ class App extends React.Component {
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+App.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
+
+const Main = withStyles(styles)(App);
+
+ReactDOM.render(<Main/>, document.getElementById('root'));
