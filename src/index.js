@@ -10,8 +10,8 @@ import Grid from '@material-ui/core/Grid';
 const styles = theme => ({
     detail: {
         [theme.breakpoints.up("md")]: {
-            position: "relative",
-            bottom: 350,
+            position: "fixed",
+            top: 200,
             left: 800
           }
     }
